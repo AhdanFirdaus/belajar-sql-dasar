@@ -1,0 +1,11 @@
+# Belajar SQL
+
+requirement: https://dev.mysql.com/downloads/installer/
+
+## SQL itu apa bang ?
+
+Nah jadi `SQL (Structured Query Language)` adalah bahasa pemrograman yang digunakan untuk mengelola dan mengakses data yang tersimpan dalam sistem basis data relasional. 
+
+## Sejarah Singkat
+SQL pertama kali dikembangkan oleh `IBM` pada tahun 1970-an berdasarkan konsep model relasional yang dikemukakan oleh `Edgar F. Codd`. Pada tahun 1974, IBM mengembangkan bahasa `SEQUEL` untuk bekerja dengan database relasional, yang kemudian disingkat menjadi `SQL`. Pada tahun 1986, ANSI dan ISO mulai menetapkan standar SQL, membuatnya menjadi bahasa universal untuk mengelola data dalam basis data relasional. SQL terus berkembang dan menjadi standar utama yang digunakan di banyak sistem manajemen basis data, seperti `MySQL`, `PostgreSQL`, dan `Oracle`.
+
