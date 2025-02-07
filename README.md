@@ -21,12 +21,6 @@ SQL pertama kali dikembangkan oleh `IBM` pada tahun 1970-an berdasarkan konsep m
 CREATE DATABASE nama_database;
 ```
 
-**Cek Isi Database**
-
-```sql
-SHOW DATABASES;
-```
-
 **Membuat Database Namun tidak mau sama**
 
 ```sql
@@ -38,3 +32,16 @@ CREATE DATABASE IF NOT EXISTS nama_database;
 DROP DATABASE nama_database;
 ```
 
+### Use Select Database
+
+**Memilih & Mengaktifkan Database**
+
+```sql
+USE nama_database;
+```
+
+**Cek database yang sedang aktif.**
+
+```sql
+SELECT DATABASE();
+```
