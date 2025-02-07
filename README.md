@@ -45,3 +45,29 @@ USE nama_database;
 ```sql
 SELECT DATABASE();
 ```
+
+### Show Database
+
+**Cek Isi Database**
+
+```sql
+SHOW DATABASES;
+```
+
+**Cek sesuai yang ingin dicek saja**
+
+```sql
+SHOW DATABASES LIKE "nama_database";
+```
+
+**Cek sesuai awalan kata**
+
+```sql
+SHOW DATABASES LIKE "%nama_database";
+```
+
+**Cek sesuai akhir kata**
+
+```sql
+SHOW DATABASES LIKE "nama_database%";
+```
