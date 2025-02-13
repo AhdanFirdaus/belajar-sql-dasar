@@ -273,7 +273,7 @@ DROP TEMPORARY TABLE tempOrders;
 **Menambahkan struktur table**
 
 ```sql
-ALTER TABLE user_kita tanggal_lahir DATE;
+ALTER TABLE user_kita ADD tanggal_lahir DATE;
 ```
 
 **Menghapus column**
