@@ -265,3 +265,37 @@ SELECT * FROM tempOrders;
 
 DROP TEMPORARY TABLE tempOrders;
 ```
+
+### Alter Table
+
+`ALTER TABLE` adalah perintah di SQL yang digunakan untuk mengubah struktur tabel yang sudah ada tanpa menghapus dan membuat ulang tabel tersebut.
+
+**Menambahkan struktur table**
+
+```sql
+ALTER TABLE user_kita tanggal_lahir DATE;
+```
+
+**Menghapus column**
+
+```sql
+ALTER TABLE user_kita DROP COLUMN tanggal_lahir;
+```
+
+**Modif**
+
+```sql
+ALTER TABLE user_kita MODIFY nama VARCHAR(50);
+```
+
+**Rename**
+
+```sql
+ALTER TABLE user_kita RENAME COLUMN nama TO nama_user;
+```
+
+**Rename Table**
+
+```sql
+ALTER TABLE user_kita RENAME TO user_milik_kita;
+```
