@@ -115,3 +115,53 @@ DESC pelanggan;
 SHOW TABLES;
 ```
 
+### Tipe Data
+
+1. `Tipe Data Numerik`
+Digunakan untuk menyimpan angka, baik bilangan bulat maupun desimal.
+
+```md
+`INTEGER (INT, BIGINT, SMALLINT, TINYINT)` → Bilangan bulat.
+`DECIMAL (NUMERIC, FIXED)` → Bilangan desimal dengan presisi tetap.
+`FLOAT (REAL, DOUBLE PRECISION)` → Bilangan desimal dengan presisi tidak tetap.
+```
+
+2. `Tipe Data String (Karakter & Teks)`
+Digunakan untuk menyimpan teks atau karakter.
+
+```md
+`CHAR(n)` → String dengan panjang tetap.
+`VARCHAR(n)` → String dengan panjang variabel.
+`TEXT (TINYTEXT, MEDIUMTEXT, LONGTEXT)` → Menyimpan teks dalam jumlah besar.
+```
+
+3. `Tipe Data Date & Time (Tanggal & Waktu)`
+Digunakan untuk menyimpan informasi tanggal dan waktu.
+
+```md
+`DATE` → Menyimpan tanggal (YYYY-MM-DD).
+`TIME` → Menyimpan waktu (HH:MM:SS).
+`DATETIME` → Menyimpan tanggal dan waktu (YYYY-MM-DD HH:MM:SS).
+`TIMESTAMP` → Menyimpan stempel waktu dalam format Unix.
+```
+
+4. `Tipe Data Boolean`
+
+```md
+`BOOLEAN (BOOL)` → Biasanya disimpan sebagai TINYINT(1), di mana 0 berarti FALSE dan 1 berarti TRUE.
+```
+
+5. `Tipe Data Binary (Biner)`
+Digunakan untuk menyimpan data dalam format biner seperti gambar atau file.
+
+```md
+`BLOB (TINYBLOB, MEDIUMBLOB, LONGBLOB)` → Menyimpan data biner dalam berbagai ukuran.
+`BINARY(n), VARBINARY(n)` → Data biner dengan panjang tetap atau variabel.
+```
+
+6. `Tipe Data Lainnya`
+
+```md
+`ENUM` → Menyimpan nilai tetap yang bisa dipilih dari daftar tertentu.
+`SET` → Menyimpan satu atau lebih nilai dari daftar yang telah ditentukan.
+```
