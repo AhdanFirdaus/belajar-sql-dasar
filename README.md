@@ -89,7 +89,7 @@ CREATE TABLE pelanggan(
 **Membuat Table tidak mau sama**
 
 ```sql
-CREATE TABLE pelanggan_tetap(
+CREATE TABLE IF NOT EXISTS pelanggan_tetap(
   id_pelanggan INT AUTO_INCREMENT PRIMARY KEY,
   nama VARCHAR(50) NOT NULL,
   umur INT NOT NULL,
