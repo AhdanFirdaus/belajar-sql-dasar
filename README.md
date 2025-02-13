@@ -10,7 +10,8 @@ Nah jadi `SQL (Structured Query Language)` adalah bahasa pemrograman yang diguna
 SQL pertama kali dikembangkan oleh `IBM` pada tahun 1970-an berdasarkan konsep model relasional yang dikemukakan oleh `Edgar F. Codd`. Pada tahun 1974, IBM mengembangkan bahasa `SEQUEL` untuk bekerja dengan database relasional, yang kemudian disingkat menjadi `SQL`. Pada tahun 1986, ANSI dan ISO mulai menetapkan standar SQL, membuatnya menjadi bahasa universal untuk mengelola data dalam basis data relasional. SQL terus berkembang dan menjadi standar utama yang digunakan di banyak sistem manajemen basis data, seperti `MySQL`, `PostgreSQL`, dan `Oracle`.
 
 ## Let's code
-> 💡 Jangan lupa pakai titik koma ";" Dan juga disarankan pakai "_" untuk pengganti spasi atau bisa camelcase contoh "dataBarang"
+> [!TIP]
+> Jangan lupa pakai titik koma ";" Dan juga disarankan pakai "_" untuk pengganti spasi atau bisa camelcase contoh "dataBarang"
 
 
 ### Create Database
@@ -71,3 +72,46 @@ SHOW DATABASES LIKE "%nama_database";
 ```sql
 SHOW DATABASES LIKE "nama_database%";
 ```
+
+### Create Table
+
+**Membuat Table**
+
+```sql
+CREATE TABLE pelanggan(
+  id_pelanggan INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(50) NOT NULL,
+  umur INT NOT NULL,
+  alamat VARCHAR(100)
+);
+```
+
+**Membuat Table tidak mau sama**
+
+```sql
+CREATE TABLE pelanggan_tetap(
+  id_pelanggan INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(50) NOT NULL,
+  umur INT NOT NULL,
+  alamat VARCHAR(100)
+);
+```
+
+**Membuat Table sesuai table yang ada**
+
+```sql
+CREATE TABLE pelanggan_aktif AS SELECT id_pelanggan, nama, umur FROM pelanggan;
+```
+
+**Melihat isi Table**
+
+```sql
+DESC pelanggan;
+```
+
+**Melihat ada Table apa saja**
+
+```sql
+SHOW TABLES;
+```
+
