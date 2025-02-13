@@ -188,12 +188,15 @@ SELECT nama, umur FROM pelanggan;
 
 ### Delete & Truncate
 
-| Aspek | DELETE | TRUNCATE |
-| Fungsi | Menghapus data dari tabel dengan kondisi tertentu (bisa sebagian atau semua). | Menghapus semua data dalam tabel tanpa kondisi. |
-| WHERE Clause | Bisa menggunakan `WHERE` untuk menghapus data tertentu. | Tidak bisa menggunakan `WHERE`, langsung menghapus semua data. |
-| Rollback (Undo) | Bisa dikembalikan (`ROLLBACK`) jika dalam transaksi (`BEGIN TRANSACTION`). | Tidak bisa di-rollback, karena langsung menghapus semua data secara permanen. |
-| Auto Increment | Tidak mengubah nilai `AUTO_INCREMENT`. | Me-reset nilai AUTO_INCREMENT kembali ke awal. |
-| Trigger | Menjalankan trigger `AFTER DELETE` jika ada. | Tidak menjalankan trigger karena tidak terjadi operasi baris per baris. |
+
+| Aspek           | DELETE                                              | TRUNCATE                                           |
+|----------------|-----------------------------------------------------|---------------------------------------------------|
+| **Fungsi**      | Menghapus data dari tabel dengan kondisi tertentu (bisa sebagian atau semua). | Menghapus semua data dalam tabel tanpa kondisi. |
+| **WHERE Clause** | Bisa menggunakan `WHERE` untuk menghapus data tertentu. | Tidak bisa menggunakan `WHERE`, langsung menghapus semua data. |
+| **Rollback (Undo)** | Bisa dikembalikan (`ROLLBACK`) jika dalam transaksi (`BEGIN TRANSACTION`). | Tidak bisa di-rollback, karena langsung menghapus semua data secara permanen. |
+| **Auto Increment** | Tidak mengubah nilai `AUTO_INCREMENT`. | Me-reset nilai `AUTO_INCREMENT` kembali ke awal. |
+| **Trigger**     | Menjalankan trigger `AFTER DELETE` jika ada. | Tidak menjalankan trigger karena tidak terjadi operasi baris per baris. |
+
 
 **Kapan Menggunakan DELETE atau TRUNCATE?**
 - Gunakan `DELETE` jika kamu ingin menghapus `sebagian data` berdasarkan kondisi tertentu atau ingin mempertahankan perubahan dalam transaksi.
