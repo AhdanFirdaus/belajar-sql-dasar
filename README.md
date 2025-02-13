@@ -241,3 +241,27 @@ CREATE TABLE pelanggan_jakarta AS SELECT * FROM pelanggan WHERE alamat = "semara
 DROP TABLE pelanggan_copy;
 ```
 
+### Temporary Table
+
+`Temporary Table` adalah tabel sementara yang dibuat dalam sesi database tertentu dan otomatis terhapus setelah sesi berakhir atau setelah tabel tersebut tidak lagi dibutuhkan. Tabel ini sering digunakan untuk menyimpan data sementara dalam query kompleks, pengolahan batch, atau penyimpanan hasil sementara.
+
+
+**Temporary Table di MySQL**
+
+- Berlaku hanya dalam sesi saat ini.
+- Tidak bisa diakses oleh sesi lain.
+- Harus dibuat dengan kata kunci TEMPORARY.
+
+contoh:
+```sql
+CREATE TEMPORARY TABLE tempOrders (
+    order_id INT PRIMARY KEY,
+    customer_name VARCHAR(100)
+);
+
+INSERT INTO tempOrders VALUES (101, 'dadan'), (102, 'ahdan');
+
+SELECT * FROM tempOrders;
+
+DROP TEMPORARY TABLE tempOrders;
+```
