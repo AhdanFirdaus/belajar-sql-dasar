@@ -165,3 +165,48 @@ Digunakan untuk menyimpan data dalam format biner seperti gambar atau file.
 `ENUM` → Menyimpan nilai tetap yang bisa dipilih dari daftar tertentu.
 `SET` → Menyimpan satu atau lebih nilai dari daftar yang telah ditentukan.
 ```
+
+### Create Value
+
+**Menambahkan Data pada table**
+
+```sql
+INSERT INTO pelanggan VALUES (NULL, "dadan", 17, "semarang");
+```
+
+**Menampilkan semua isi data pada table**
+
+```sql
+SELECT * FROM pelanggan;
+```
+
+**Menampilkan isi data yang diinginkan saja**
+
+```sql
+SELECT nama, umur FROM pelanggan;
+```
+
+### Delete & Truncate
+
+| Aspek | DELETE | TRUNCATE |
+| Fungsi | Menghapus data dari tabel dengan kondisi tertentu (bisa sebagian atau semua). | Menghapus semua data dalam tabel tanpa kondisi. |
+| WHERE Clause | Bisa menggunakan `WHERE` untuk menghapus data tertentu. | Tidak bisa menggunakan `WHERE`, langsung menghapus semua data. |
+| Rollback (Undo) | Bisa dikembalikan (`ROLLBACK`) jika dalam transaksi (`BEGIN TRANSACTION`). | Tidak bisa di-rollback, karena langsung menghapus semua data secara permanen. |
+| Auto Increment | Tidak mengubah nilai `AUTO_INCREMENT`. | Me-reset nilai AUTO_INCREMENT kembali ke awal. |
+| Trigger | Menjalankan trigger `AFTER DELETE` jika ada. | Tidak menjalankan trigger karena tidak terjadi operasi baris per baris. |
+
+**Kapan Menggunakan DELETE atau TRUNCATE?**
+- Gunakan `DELETE` jika kamu ingin menghapus `sebagian data` berdasarkan kondisi tertentu atau ingin mempertahankan perubahan dalam transaksi.
+- Gunakan `TRUNCATE` jika kamu ingin menghapus `semua data` dalam tabel dengan cepat dan tidak perlu menyimpan histori penghapusan.
+
+**Menghapus Table**
+
+```sql
+TRUNCATE TABLE pelanggan;
+```
+
+**Menghapus isi Table**
+
+```sql
+DELETE FROM pelanggan WHERE alamat = "semarang";
+```
