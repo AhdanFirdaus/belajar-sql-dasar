@@ -213,3 +213,31 @@ TRUNCATE TABLE pelanggan;
 ```sql
 DELETE FROM pelanggan WHERE alamat = "semarang";
 ```
+
+### Cloning Table
+
+**Copy Tanpa Data**
+
+```sql
+CREATE TABLE pelanggan_copy LIKE pelanggan;
+```
+
+**Copy Dengan Data**
+
+```sql
+CREATE TABLE pelanggan_copy AS SELECT * FROM pelanggan;
+```
+
+**Copy Table berdasarkan data yang diinginkan saja**
+
+```sql
+CREATE TABLE pelanggan_jakarta AS SELECT * FROM pelanggan WHERE alamat = "semarang";
+```
+
+
+**Menghapus Table**
+
+```sql
+DROP TABLE pelanggan_copy;
+```
+
