@@ -299,3 +299,37 @@ ALTER TABLE user_kita RENAME COLUMN nama TO nama_user;
 ```sql
 ALTER TABLE user_kita RENAME TO user_milik_kita;
 ```
+
+### Constraint
+
+Constraint adalah aturan atau batasan yang diterapkan pada kolom di tabel database untuk memastikan `integritas` dan `validitas data`. Constraint membantu dalam mencegah kesalahan atau inkonsistensi dalam database.
+
+`NOT NULL` = tidak boleh kosong
+`UNIQUE` = tidak boleh kembar
+`PRIMARY KEY` = bisa dikombinasi sama NOT NULL, menentukan kolom sebagai identitas unik untuk setiap baris dalam tabel dan tidak boleh NULL dan harus unik.
+`CHECK` = mengisi nilai dengan kondisi" tertentu
+contoh:
+```sql
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    age INT CHECK (age >= 18)
+);
+```
+`DEFAULT` = memberikan nilai default jika tidak ada nilai yang dimasukkan.
+contoh:
+```sql
+CREATE TABLE accounts (
+    account_id INT PRIMARY KEY,
+    balance DECIMAL(10,2) DEFAULT 0.00
+);
+```
+`FOREIGN KEY` = menghubungkan dua tabel untuk menjaga hubungan referensial dan mencegah penyisipan data yang tidak valid.
+contoh:
+```sql
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+```
+cara bacanya: `user_id` harus sesuai dengan `id` di tabel `users`
