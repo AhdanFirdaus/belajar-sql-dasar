@@ -455,3 +455,7 @@ DELETE FROM user WHERE id_user = 2;
 ```sql
 DELETE FROM user WHERE kota = "semarang" OR nama LIKE "%dadan%";
 ```
+
+## Closing
+
+Terimakasih sudah membaca sampai akhir, selanjutnya tinggal belajar sql lanjutan secara mandiri. 🙏
