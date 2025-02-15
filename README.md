@@ -435,3 +435,23 @@ UPDATE user SET kota = "surabaya" WHERE id_user > 1;
 ```sql
 UPDATE barang SET stok_barang = stok_barang + 5;
 ```
+
+### Delete Query
+
+**Menghapus data bukan strukturnya**
+
+```sql
+DELETE FROM user;
+```
+
+**Menghapus sesuai yang diinginkan**
+
+```sql
+DELETE FROM user WHERE id_user = 2;
+```
+
+**Menghapus sesuai informasi yang diberikan**
+
+```sql
+DELETE FROM user WHERE kota = "semarang" OR nama LIKE "%dadan%";
+```
