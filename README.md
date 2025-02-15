@@ -347,3 +347,59 @@ INSERT INTO user VALUES (1, "dadan", "dadan@email.com", "jakarta"), (2, "ahdan",
 ```sql
 INSERT INTO user (id_user, nama) VALUES (3, "firdaus")
 ```
+
+### Select Query
+
+**Menampilkan semua isi tablenya**
+
+```sql
+SELECT * FROM user;
+```
+
+**Menampilkan isi sesuai target**
+
+```sql
+SELECT nama, kota FROM user;
+```
+
+**Menampilkan sesuai isi target**
+
+```sql
+SELECT * FROM user WHERE kota = "aceh";
+```
+
+**Menampilkan sesuai isi target dan target yang lain**
+
+```sql
+SELECT * FROM user WHERE kota = "aceh" AND email LIKE "%gmail.com";
+```
+
+**Mengurutkan berdasarkan nama**
+
+```sql
+SELECT * FROM user ORDER BY nama;
+```
+
+**Mengurutkan dari bawah**
+
+```sql
+SELECT * FROM user ORDER BY nama DESC;
+```
+
+**Menampilkan 2 pertama**
+
+```sql
+SELECT * FROM user LIMIT 2;
+```
+
+**Menampilkam Total**
+
+```sql
+SELECT COUNT(*) AS total_user FROM user;
+```
+
+**Menampilkan yang unik**
+
+```sql
+SELECT DISTINCT kota FROM user;
+```
