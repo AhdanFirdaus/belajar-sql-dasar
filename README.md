@@ -333,3 +333,17 @@ CREATE TABLE orders (
 );
 ```
 cara bacanya: `user_id` harus sesuai dengan `id` di tabel `users`
+
+### Insert Query 
+
+**Menambahkan data**
+
+```sql
+INSERT INTO user VALUES (1, "dadan", "dadan@email.com", "jakarta"), (2, "ahdan", "ahdan@email.com", "semarang");
+```
+
+**Menambahkan data yang diinginkan saja**
+
+```sql
+INSERT INTO user (id_user, nama) VALUES (3, "firdaus")
+```
