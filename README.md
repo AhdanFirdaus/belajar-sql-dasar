@@ -403,3 +403,35 @@ SELECT COUNT(*) AS total_user FROM user;
 ```sql
 SELECT DISTINCT kota FROM user;
 ```
+
+### Update Query
+
+**Mengubah**
+
+```sql
+UPDATE user SET kota = "jakarta";
+```
+
+**Mengubah sesuai target**
+
+```sql
+UPDATE user SET kota = "bandung" WHERE id_user = 1;
+```
+
+**Mengubah beberapa data secara langsung**
+
+```sql
+UPDATE user SET email = "contoh@email.com" kota = "semarang" WHERE id_user = 2;
+```
+
+**Mengubah sesuai kondisi**
+
+```sql
+UPDATE user SET kota = "surabaya" WHERE id_user > 1;
+```
+
+**Mengubah data secara dinamis**
+
+```sql
+UPDATE barang SET stok_barang = stok_barang + 5;
+```
